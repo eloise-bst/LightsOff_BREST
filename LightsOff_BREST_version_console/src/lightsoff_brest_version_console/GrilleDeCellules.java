@@ -113,6 +113,16 @@ public class GrilleDeCellules {
         activerLigneColonneOuDiagonaleAleatoire();
     }
 }
-
+    
+    public boolean cellulesToutesEteintes() {
+    for (int i = 0; i < nbLignes; i++) {
+        for (int j = 0; j < nbColonnes; j++) {
+            if (!matriceCellules[i][j].estEteinte()) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 
 }
