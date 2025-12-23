@@ -10,4 +10,8 @@ package lightsoff_brest_version_console;
  */
 public class GrilleDeCellules {
     
+    private CelluleLumineuse[][] matriceCellules;
+    private int nbLignes;
+    private int nbColonnes;
+    
 }
