@@ -14,7 +14,9 @@ public class LightsOff_BREST_version_console {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        GrilleDeCellules grille = new GrilleDeCellules(5, 5);
+        System.out.println(grille);
     }
     
 }
