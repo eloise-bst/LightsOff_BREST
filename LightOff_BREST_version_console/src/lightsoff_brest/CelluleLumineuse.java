@@ -10,4 +10,32 @@ package lightsoff_brest;
  */
 public class CelluleLumineuse {
     
+    private boolean etat;
+    
+    public CelluleLumineuse() {
+        this.etat = false;
+    }
+
+    public void activerCellule() {
+        this.etat = !this.etat;
+    }
+
+    public void eteindreCellule() {
+        this.etat = false;
+    }
+
+    public boolean estEteinte() {
+        return !etat;
+    }
+
+    public boolean getEtat() {
+        return etat;
+    }
+
+
+    @Override
+    public String toString() {
+        return etat ? "X" : "O";
+    }
+    
 }
