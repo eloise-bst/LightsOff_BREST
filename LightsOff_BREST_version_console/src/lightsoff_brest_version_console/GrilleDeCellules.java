@@ -26,4 +26,29 @@ public class GrilleDeCellules {
             }
         }
     }
+    
+    @Override
+    public String toString() {
+    String chaine = "    ";
+    for (int j = 0; j < nbColonnes; j++) {
+        chaine += j + " ";
+    }
+    chaine += "\n";
+
+    chaine += "  |";
+    for (int j = 0; j < nbColonnes; j++) {
+        chaine += "--";
+    }
+    chaine += "\n";
+
+    for (int i = 0; i < nbLignes; i++) {
+        chaine += i + " | ";
+        for (int j = 0; j < nbColonnes; j++) {
+            chaine += matriceCellules[i][j].toString() + " "; 
+        }
+        chaine += "\n";
+    }
+    
+    return chaine;
+}
 }
