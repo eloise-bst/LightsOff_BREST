@@ -13,4 +13,17 @@ public class GrilleDeCellules {
     private CelluleLumineuse[][] matriceCellules;
     private int nbLignes;
     private int nbColonnes;
+    
+    public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
+        nbLignes = p_nbLignes;
+        nbColonnes = p_nbColonnes;
+
+        matriceCellules = new CelluleLumineuse[nbLignes][nbColonnes];
+
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                matriceCellules[i][j] = new CelluleLumineuse();
+            }
+        }
+    }
 }
