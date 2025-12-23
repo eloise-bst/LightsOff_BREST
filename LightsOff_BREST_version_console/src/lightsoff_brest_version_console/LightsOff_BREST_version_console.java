@@ -37,6 +37,9 @@ public class LightsOff_BREST_version_console {
         GrilleDeCellules g5 = new GrilleDeCellules(5, 5);
         g5.activerLigneColonneOuDiagonaleAleatoire();
         System.out.println(g5);
-    }
-    
+        
+        GrilleDeCellules g6 = new GrilleDeCellules(5, 5);
+        g6.melangerMatriceAleatoirement(10);
+        System.out.println(g6);
+    }  
 }

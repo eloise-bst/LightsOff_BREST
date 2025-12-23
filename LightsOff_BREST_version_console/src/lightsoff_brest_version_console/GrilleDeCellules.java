@@ -98,4 +98,21 @@ public class GrilleDeCellules {
                 break;
         }
     }
+
+    public void eteindreToutesLesCellules() {
+    for (int i = 0; i < nbLignes; i++) {
+        for (int j = 0; j < nbColonnes; j++) {
+            matriceCellules[i][j].eteindreCellule();
+        }
+    }
+}
+    public void melangerMatriceAleatoirement(int nbTours) {
+    eteindreToutesLesCellules();
+
+    for (int i = 0; i < nbTours; i++) {
+        activerLigneColonneOuDiagonaleAleatoire();
+    }
+}
+
+
 }
