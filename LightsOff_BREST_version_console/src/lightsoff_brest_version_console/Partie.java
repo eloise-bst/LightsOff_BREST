@@ -14,10 +14,12 @@ public class Partie {
     
     private GrilleDeCellules grille;
     private int nbCoups;
+    private int nbCoupsMax;
 
     public Partie() {
         grille = new GrilleDeCellules(5, 5);
         nbCoups = 0;
+        nbCoupsMax = 20;
     }
 
     public void initialiserPartie() {
@@ -27,41 +29,33 @@ public class Partie {
     public void lancerPartie() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Début de la partie !");
         System.out.println(grille);
 
-        while (!grille.cellulesToutesEteintes()) {
+        while (!grille.cellulesToutesEteintes() && nbCoups < nbCoupsMax) {
 
-            System.out.println("Nombre de coups : " + nbCoups);
-            System.out.println("Choisissez un coup :");
-            System.out.println("1 - Activer une ligne");
-            System.out.println("2 - Activer une colonne");
-            System.out.println("3 - Activer la diagonale descendante");
-            System.out.println("4 - Activer la diagonale montante");
+            System.out.println("Coups : " + nbCoups + "/" + nbCoupsMax);
+            System.out.println("1 - Ligne");
+            System.out.println("2 - Colonne");
+            System.out.println("3 - Diagonale descendante");
+            System.out.println("4 - Diagonale montante");
 
             int choix = scanner.nextInt();
 
             switch (choix) {
                 case 1:
-                    System.out.print("Numéro de la ligne : ");
-                    int ligne = scanner.nextInt();
-                    grille.activerLigneDeCellules(ligne);
+                    System.out.print("Ligne : ");
+                    grille.activerLigneDeCellules(scanner.nextInt());
                     break;
-
                 case 2:
-                    System.out.print("Numéro de la colonne : ");
-                    int colonne = scanner.nextInt();
-                    grille.activerColonneDeCellules(colonne);
+                    System.out.print("Colonne : ");
+                    grille.activerColonneDeCellules(scanner.nextInt());
                     break;
-
                 case 3:
                     grille.activerDiagonaleDescendante();
                     break;
-
                 case 4:
                     grille.activerDiagonaleMontante();
                     break;
-
                 default:
                     System.out.println("Choix invalide.");
                     continue;
@@ -71,8 +65,11 @@ public class Partie {
             System.out.println(grille);
         }
 
-        System.out.println(" Partie terminée !");
-        System.out.println("Nombre de coups joués : " + nbCoups);
+        if (grille.cellulesToutesEteintes()) {
+            System.out.println("Bravo ! Vous avez gagné en " + nbCoups + " coups.");
+        } else {
+            System.out.println("Perdu ! Nombre maximum de coups atteint (" + nbCoupsMax + ").");
+        }
     }
     
 }
