@@ -13,6 +13,10 @@ import javax.swing.JButton;
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
     
+    private GrilleDeCellules grille;
+    private int nbCoups;
+    private int nbCoupsMax;
+    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FenetrePrincipale.class.getName());
 
     /**
@@ -23,14 +27,22 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         
         int nbLignes = 10;
         int nbColonnes = 10;
+
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
-        
-        for (int i=0; i < nbLignes; i++) {
-            for (int j=0; j < nbColonnes; j++ ) {
-                JButton bouton_cellule = new JButton(); // création d'un bouton
-                PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
+
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                JButton bouton_cellule = new JButton();
+                PanneauGrille.add(bouton_cellule);
             }
         }
+
+        grille = new GrilleDeCellules(nbLignes, nbColonnes);
+    }
+    
+    public void initialiserPartie() {
+        grille.eteindreToutesLesCellules();
+        grille.melangerMatriceAleatoirement(10);
     }
 
     /**
