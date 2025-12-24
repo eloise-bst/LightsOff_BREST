@@ -15,36 +15,9 @@ public class LightsOff_BREST_version_console {
      */
     public static void main(String[] args) {
         
-        GrilleDeCellules grille = new GrilleDeCellules(5, 5);
-        System.out.println(grille);
-
-        GrilleDeCellules g1 = new GrilleDeCellules(5, 5);
-        g1.activerLigneDeCellules(2);
-        System.out.println(g1);
-
-        GrilleDeCellules g2 = new GrilleDeCellules(5, 5);
-        g2.activerColonneDeCellules(3);
-        System.out.println(g2);
-
-        GrilleDeCellules g3 = new GrilleDeCellules(5, 5);
-        g3.activerDiagonaleDescendante();
-        System.out.println(g3);
-
-        GrilleDeCellules g4 = new GrilleDeCellules(5, 5);
-        g4.activerDiagonaleMontante();
-        System.out.println(g4);
-
-        GrilleDeCellules g5 = new GrilleDeCellules(5, 5);
-        g5.activerLigneColonneOuDiagonaleAleatoire();
-        System.out.println(g5);
+        Partie partie = new Partie();
+        partie.initialiserPartie();
+        partie.lancerPartie();
         
-        GrilleDeCellules g6 = new GrilleDeCellules(5, 5);
-        g6.melangerMatriceAleatoirement(10);
-        System.out.println(g6);
-        
-        GrilleDeCellules g7 = new GrilleDeCellules(5, 5);
-        System.out.println(g7.cellulesToutesEteintes());
-        g7.activerLigneDeCellules(1);
-        System.out.println(g7.cellulesToutesEteintes());
     }  
 }
