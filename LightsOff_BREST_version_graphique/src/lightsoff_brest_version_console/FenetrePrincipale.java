@@ -4,6 +4,9 @@
  */
 package lightsoff_brest_version_console;
 
+import java.awt.GridLayout;
+import javax.swing.JButton;
+
 /**
  *
  * @author eloisebrest
@@ -17,6 +20,17 @@ public class FenetrePrincipale extends javax.swing.JFrame {
      */
     public FenetrePrincipale() {
         initComponents();
+        
+        int nbLignes = 10;
+        int nbColonnes = 10;
+        PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
+        
+        for (int i=0; i < nbLignes; i++) {
+            for (int j=0; j < nbColonnes; j++ ) {
+                JButton bouton_cellule = new JButton(); // création d'un bouton
+                PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
+            }
+        }
     }
 
     /**
