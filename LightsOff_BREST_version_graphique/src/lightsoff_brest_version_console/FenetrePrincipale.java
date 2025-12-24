@@ -28,19 +28,25 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         int nbLignes = 10;
         int nbColonnes = 10;
 
+        grille = new GrilleDeCellules(nbLignes, nbColonnes);
+
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
 
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
-                JButton bouton_cellule = new JButton();
+                CelluleGraphique bouton_cellule =
+                        new CelluleGraphique(grille.getCellule(i, j), 36, 36);
                 PanneauGrille.add(bouton_cellule);
             }
         }
 
-        grille = new GrilleDeCellules(nbLignes, nbColonnes);
+        initialiserPartie();
+        repaint();
     }
-    
+
     public void initialiserPartie() {
+        nbCoups = 0;
+        nbCoupsMax = 20; 
         grille.eteindreToutesLesCellules();
         grille.melangerMatriceAleatoirement(10);
     }
