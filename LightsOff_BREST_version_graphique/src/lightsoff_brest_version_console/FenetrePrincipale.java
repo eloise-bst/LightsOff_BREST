@@ -29,19 +29,19 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         int nbColonnes = 10;
 
         grille = new GrilleDeCellules(nbLignes, nbColonnes);
+        
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
-
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
-                CelluleGraphique bouton_cellule =
-                        new CelluleGraphique(grille.getCellule(i, j), 36, 36);
-                PanneauGrille.add(bouton_cellule);
+                CelluleGraphique cellule =
+                        new CelluleGraphique(grille.getCellule(i, j), 40, 40);
+                PanneauGrille.add(cellule);
             }
         }
 
-        initialiserPartie();
-        repaint();
-    }
+    initialiserPartie();
+    repaint();
+}
 
     public void initialiserPartie() {
         nbCoups = 0;
@@ -111,6 +111,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PanneauBoutonsVerticaux = new javax.swing.JPanel();
         PanneauGrille = new javax.swing.JPanel();
         btnLigne1 = new javax.swing.JButton();
         btnLigne2 = new javax.swing.JButton();
@@ -123,25 +124,39 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         btnLigne9 = new javax.swing.JButton();
         btnLigne10 = new javax.swing.JButton();
         btnColonne1 = new javax.swing.JButton();
-        btnColonne2 = new javax.swing.JButton();
         btnColonne3 = new javax.swing.JButton();
-        btnColonne4 = new javax.swing.JButton();
         btnColonne5 = new javax.swing.JButton();
-        btnColonne6 = new javax.swing.JButton();
         btnColonne7 = new javax.swing.JButton();
-        btnColonne8 = new javax.swing.JButton();
         btnColonne9 = new javax.swing.JButton();
-        btnColonne10 = new javax.swing.JButton();
         btnDiagDesc = new javax.swing.JButton();
         btnDiagMont = new javax.swing.JButton();
         texteEtatDeLaPartie = new javax.swing.JLabel();
         btnRecommencer = new javax.swing.JButton();
+        btnColonne2 = new javax.swing.JButton();
+        btnColonne4 = new javax.swing.JButton();
+        btnColonne6 = new javax.swing.JButton();
+        btnColonne8 = new javax.swing.JButton();
+        btnColonne10 = new javax.swing.JButton();
+        textePrésentation = new javax.swing.JLabel();
+
+        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(51, 153, 255));
+
+        javax.swing.GroupLayout PanneauBoutonsVerticauxLayout = new javax.swing.GroupLayout(PanneauBoutonsVerticaux);
+        PanneauBoutonsVerticaux.setLayout(PanneauBoutonsVerticauxLayout);
+        PanneauBoutonsVerticauxLayout.setHorizontalGroup(
+            PanneauBoutonsVerticauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        PanneauBoutonsVerticauxLayout.setVerticalGroup(
+            PanneauBoutonsVerticauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanneauGrille.setBackground(new java.awt.Color(0, 153, 51));
+        PanneauGrille.setBackground(new java.awt.Color(0, 153, 255));
 
         javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
         PanneauGrille.setLayout(PanneauGrilleLayout);
@@ -156,166 +171,129 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 400, 400));
 
-        btnLigne1.setText("1L");
+        btnLigne1.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 50, -1));
+        getContentPane().add(btnLigne1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 20, 20));
 
-        btnLigne2.setText("2L");
+        btnLigne2.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 50, -1));
+        getContentPane().add(btnLigne2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 20, 20));
 
-        btnLigne3.setText("3L");
+        btnLigne3.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne3ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 50, -1));
+        getContentPane().add(btnLigne3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 20, 20));
 
-        btnLigne4.setText("4L");
+        btnLigne4.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne4ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 50, -1));
+        getContentPane().add(btnLigne4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 20, 20));
 
-        btnLigne5.setText("5L");
+        btnLigne5.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne5ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 50, -1));
+        getContentPane().add(btnLigne5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 20, 20));
 
-        btnLigne6.setText("6L");
+        btnLigne6.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne6ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 50, -1));
+        getContentPane().add(btnLigne6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 20, 20));
 
-        btnLigne7.setText("7L");
+        btnLigne7.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne7ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 50, -1));
+        getContentPane().add(btnLigne7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 20, 20));
 
-        btnLigne8.setText("8L");
+        btnLigne8.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne8ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 50, -1));
+        getContentPane().add(btnLigne8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 20, 20));
 
-        btnLigne9.setText("9L");
+        btnLigne9.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne9ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 50, -1));
+        getContentPane().add(btnLigne9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 20, 20));
 
-        btnLigne10.setText("10L");
+        btnLigne10.setBackground(new java.awt.Color(0, 204, 255));
         btnLigne10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne10ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLigne10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 60, -1));
+        getContentPane().add(btnLigne10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, 20, 20));
 
-        btnColonne1.setText("1C");
+        btnColonne1.setBackground(new java.awt.Color(0, 204, 255));
         btnColonne1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnColonne1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 50, -1));
+        getContentPane().add(btnColonne1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 20, 20));
 
-        btnColonne2.setText("2C");
-        btnColonne2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnColonne2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 50, -1));
-
-        btnColonne3.setText("3C");
+        btnColonne3.setBackground(new java.awt.Color(0, 204, 255));
         btnColonne3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnColonne3ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 50, -1));
+        getContentPane().add(btnColonne3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 20, 20));
 
-        btnColonne4.setText("4C");
-        btnColonne4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnColonne4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 50, -1));
-
-        btnColonne5.setText("5C");
+        btnColonne5.setBackground(new java.awt.Color(0, 204, 255));
         btnColonne5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnColonne5ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 50, -1));
+        getContentPane().add(btnColonne5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 20, 20));
 
-        btnColonne6.setText("6C");
-        btnColonne6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnColonne6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 50, -1));
-
-        btnColonne7.setText("7C");
+        btnColonne7.setBackground(new java.awt.Color(0, 204, 255));
         btnColonne7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnColonne7ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 50, -1));
+        getContentPane().add(btnColonne7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 20, 20));
 
-        btnColonne8.setText("8C");
-        btnColonne8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnColonne8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 50, -1));
-
-        btnColonne9.setText("9C");
+        btnColonne9.setBackground(new java.awt.Color(0, 204, 255));
         btnColonne9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnColonne9ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 50, -1));
+        getContentPane().add(btnColonne9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 20, 20));
 
-        btnColonne10.setText("10C");
-        btnColonne10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne10ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnColonne10, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 470, 60, -1));
-
+        btnDiagDesc.setBackground(new java.awt.Color(0, 204, 255));
+        btnDiagDesc.setFont(new java.awt.Font("KoHo", 0, 14)); // NOI18N
+        btnDiagDesc.setForeground(new java.awt.Color(51, 0, 255));
         btnDiagDesc.setText("Diagonale descente");
         btnDiagDesc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -324,6 +302,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
         getContentPane().add(btnDiagDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
 
+        btnDiagMont.setBackground(new java.awt.Color(0, 204, 255));
+        btnDiagMont.setFont(new java.awt.Font("KoHo", 0, 14)); // NOI18N
+        btnDiagMont.setForeground(new java.awt.Color(51, 0, 255));
         btnDiagMont.setText("Diagonale montante");
         btnDiagMont.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -332,9 +313,13 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
         getContentPane().add(btnDiagMont, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
 
+        texteEtatDeLaPartie.setFont(new java.awt.Font("KoHo", 0, 14)); // NOI18N
         texteEtatDeLaPartie.setText("jLabel1");
         getContentPane().add(texteEtatDeLaPartie, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
 
+        btnRecommencer.setBackground(new java.awt.Color(0, 204, 255));
+        btnRecommencer.setFont(new java.awt.Font("KoHo", 0, 14)); // NOI18N
+        btnRecommencer.setForeground(new java.awt.Color(51, 0, 204));
         btnRecommencer.setText("Recommencer");
         btnRecommencer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,6 +327,50 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnRecommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 540, -1, -1));
+
+        btnColonne2.setBackground(new java.awt.Color(0, 204, 255));
+        btnColonne2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnColonne2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 20, 20));
+
+        btnColonne4.setBackground(new java.awt.Color(0, 204, 255));
+        btnColonne4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnColonne4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 20, 20));
+
+        btnColonne6.setBackground(new java.awt.Color(0, 204, 255));
+        btnColonne6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnColonne6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 20, 20));
+
+        btnColonne8.setBackground(new java.awt.Color(0, 204, 255));
+        btnColonne8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnColonne8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 20, 20));
+
+        btnColonne10.setBackground(new java.awt.Color(0, 204, 255));
+        btnColonne10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnColonne10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 20, 20));
+
+        textePrésentation.setFont(new java.awt.Font("KoHo", 0, 14)); // NOI18N
+        textePrésentation.setText("Ayez les mêmes symboles sur la grille avec le moins de coups possibles ! ");
+        getContentPane().add(textePrésentation, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -465,6 +494,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanneauBoutonsVerticaux;
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JButton btnColonne1;
     private javax.swing.JButton btnColonne10;
@@ -490,5 +520,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton btnLigne9;
     private javax.swing.JButton btnRecommencer;
     private javax.swing.JLabel texteEtatDeLaPartie;
+    private javax.swing.JLabel textePrésentation;
     // End of variables declaration//GEN-END:variables
 }
